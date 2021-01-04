@@ -19,8 +19,11 @@ export default function AddTodo(props) {
       />
       <Button
         onPress={() => submitHandler(text)}
+        ref={(input) => {
+          this.textInput = input;
+        }}
         title="Add Todo"
-        color="coral"
+        color="blue"
       />
     </View>
   );
